@@ -1,0 +1,22 @@
+import turtle
+
+wm = turtle.Screen()
+wm.bgcolor("lightgreen")
+wm.title("another dizzy pattern which makes me feel sick")
+tess=turtle.Turtle()
+tess.color("blue")
+tess.pensize(2)
+tess.speed(0)
+
+tess.right(90)
+
+length = 5
+
+#at first, I put the original length inside the loop, leading to same length
+for i in range(50):
+    for i in range(2):
+        tess.forward(length)
+        tess.right(90)
+    length = length+5
+
+wm.mainloop()
