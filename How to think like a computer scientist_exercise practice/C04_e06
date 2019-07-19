@@ -1,0 +1,18 @@
+#write a void function draw_equitriangle(t,sz)
+#which calls draw_poly from the previous question to have its turtle draw a equilateral triangle.
+
+import turtle
+
+def draw_poly(t,n,sz):
+    for i in range (n):
+        t.forward(sz)
+        t.left(360/n)
+
+def draw_equitriangle(t,sz):
+    draw_poly(t,3,sz)
+
+tess=turtle.Turtle()
+draw_equitriangle(tess,50)
+wm = turtle.Screen()
+
+wm.mainloop()
