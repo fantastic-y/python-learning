@@ -1,0 +1,21 @@
+import turtle
+
+wm = turtle.Screen()
+wm.bgcolor("lightgreen")
+wm.title("dizzy pattern which makes me feel sick")
+tess=turtle.Turtle()
+tess.color("blue")
+tess.pensize(2)
+tess.speed(10)
+
+def draw_square(t,length,angle):
+    for i in range (4):
+        t.forward(length)
+        t.left(angle)
+    return t
+
+for i in range(20):
+    letsdoit = draw_square(tess,80,90)
+    tess.left(360/20)
+
+wm.mainloop()
