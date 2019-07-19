@@ -1,0 +1,33 @@
+#Write a program to draw this. 
+#Assume the innermost square is 20 units per side, 
+#and each successive square is 20 units bigger, per side, than the on inside it.
+
+wm = turtle.Screen()
+wm.bgcolor("lightgreen")
+tess=turtle.Turtle()
+tess.color("pink")
+tess.pensize(3)
+
+def draw_square(length,angle):
+    for i in range(4):
+        tess.forward(length)
+        tess.left(angle)
+    return tess
+
+def gap_move(length):
+    tess.penup()
+    tess.right(90)
+    tess.forward(length)
+    tess.right(90)
+    tess.forward(length)
+    tess.right(180)
+    tess.pendown()
+    return tess
+
+length=20
+for i in range(5):
+    i=draw_square(length,90)
+    length=length+20
+    i=gap_move(10)
+
+wm.mainloop()
