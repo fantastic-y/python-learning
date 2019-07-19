@@ -7,22 +7,21 @@ import turtle
 
 s = turtle.Screen()
 s.bgcolor("lightgreen")
-t=turtle.Turtle()
-t.color("pink")
-t.pensize(6)
+tess=turtle.Turtle()
+tess.color("pink")
+tess.pensize(6)
 
-#define a square
-def draw_square(length,angle):
+#define a square, non-fruitful means not returning values
+def draw_square(t,length,angle):
     for i in range(4):
         t.forward(length)
         t.left(angle)
-    return t
 
 #define numbers of squares, move away from the original square
 for i in range(5):
-    i=d_sq(20,90)
-    t.penup()
-    t.forward(40)
-    t.pendown()
+    i=draw_square(tess,20,90)
+    tess.penup()
+    tess.forward(40)
+    tess.pendown()
 
 s.mainloop()
