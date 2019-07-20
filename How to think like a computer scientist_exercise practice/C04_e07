@@ -1,0 +1,12 @@
+#write a fruitful function sum_to(n) that returns the sum of all integer numbers up to
+#and including n. So sum_to(10) would be 1+2+3+...+10 which would return the value 55.
+
+answer=int(input("what is n?"))
+def sum_to(answer):
+    n=1
+    sum=0
+    for i in range(answer):
+        sum=sum+n
+        n=n+1
+    return sum
+print(sum_to(answer))
