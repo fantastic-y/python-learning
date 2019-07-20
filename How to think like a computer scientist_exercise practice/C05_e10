@@ -1,0 +1,27 @@
+#extend your program above
+#draw five stars, but between each, pick up the pen, move forward by 350 units,turn right by 144,
+#put the pen down, and draw the next star
+
+import turtle
+
+wm=turtle.Screen()
+wm.bgcolor("lightgreen")
+
+def draw_star(t,length,angle):
+    for i in range(5):
+        t.forward(length)
+        t.right(angle)
+
+tess=turtle.Turtle()
+tess.color("pink")
+tess.pensize(5)
+tess.speed(0)
+
+for i in range(5):
+    draw_star(tess,100,144)
+    tess.penup()
+    tess.forward(350)
+    tess.right(144)
+    tess.pendown()
+
+wm.mainloop()
