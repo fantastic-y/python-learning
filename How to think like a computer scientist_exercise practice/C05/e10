@@ -4,6 +4,5 @@
 def find_hypot(a,b):
     return (a**2+b**2)**0.5
 
-x=int(input("What is one side of your triangle?"))
-y=int(input("What is another side of your triangle?"))
-print(find_hypot(x,y))
+x=int(input("What is the side of your triangle?"))
+print(find_hypot(x,x))
