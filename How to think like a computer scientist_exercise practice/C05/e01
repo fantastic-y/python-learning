@@ -1,0 +1,18 @@
+#assume the days of the week are numbered 0,1,2,3,4,5,6 from Sunday to Saturday.
+#Write a function which is given the day number, and it returns the day name.(a string)
+
+x =int(input("Please input a number in the range of 0-6"))
+if x == 0:
+    print("Sunday")
+elif x == 1:
+    print("Monday")
+elif x == 2:
+    print("Tuesday")
+elif x == 3:
+    print("Wednesday")
+elif x ==4:
+    print("Thursday")
+elif x ==5:
+    print("Friday")
+else:
+    print("Saturday")
