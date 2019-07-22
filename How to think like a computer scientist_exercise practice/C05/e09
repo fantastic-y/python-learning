@@ -1,0 +1,39 @@
+#in the turtle bar chart program, what do you expect to happen if one or more of the data values in the list is negative?
+
+import turtle
+def draw_bar(t,height):
+    t.begin_fill()
+    t.left(90)
+    t.forward(height)
+    t.write(" "+str(height))
+    t.right(90)
+    t.forward(40)
+    t.right(90)
+    t.forward(height)
+    t.left(90)
+    t.end_fill()
+    t.penup()
+    t.forward(10)
+    t.pendown()
+
+def new_color(height):
+    if height >= 200:
+        return "red"
+    elif height >= 100:
+        return "yellow"
+    else:
+        return "green"
+
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+tess = turtle.Turtle()
+tess.pensize(3)
+
+xs = [48,117,200,-10,160,-60,220]
+
+for a in xs:
+    tess.color(new_color(a))
+    draw_bar(tess,a)
+
+wn.mainloop()
