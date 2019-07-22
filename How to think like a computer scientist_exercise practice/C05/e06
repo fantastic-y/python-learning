@@ -1,0 +1,22 @@
+#write a function which is given an exam mark, and it returns a string - the grad for that mark 0 according to this scheme
+
+def grade_mark(grade):
+    if int(grade) >= 75:
+        return "First"
+    elif int(grade) >= 70:
+        return "Upper Second"
+    elif int(grade) >= 60:
+        return "Second"
+    elif int(grade) >= 50:
+        return "Third"
+    elif int(grade) >= 45:
+        return "F1 Supp"
+    elif int(grade) >= 40:
+        return "F2"
+    else:
+        return "F3"
+
+xs = [83,75,74.9,70,69.9,65,60,59.9,55,50,49.9,45,44.9,40,39.9,2,0]
+
+for a in xs:
+    print(grade_mark(a))
