@@ -1,0 +1,11 @@
+#complete this truth table:
+
+   p q r    (not(p and q)) or r
+1. F F F    (not(F and F)) or F = T
+2. F F T    (not(F and F)) or T = T
+3. F T F    (not(F and T)) or F = T
+4. F T T    (not(F and T)) or T = T
+5. T F F    (not(T and F)) or F = T
+6. T F T    (not(T and F)) or T = T
+7. T T F    (not(T and T)) or F = F
+8. T T T    (not(T and T)) or T = T
