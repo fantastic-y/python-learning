@@ -19,7 +19,7 @@ def turn_clockwise(x):
         return "S"
     elif x == "S":
         return "W"
-    else:
+    elif x == "W":
         return "N"
 
 
