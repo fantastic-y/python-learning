@@ -1,0 +1,9 @@
+#which of these tests fail?? why?
+
+test(3%4 ==0)                     Failed. should have returned remains.
+test(3%4 ==3)
+test(3/4 ==0)                     Failed. should have returned the answer.
+test(3//4 ==0)
+test(3+4*2 ==14)                  Failed. should have returned 11
+test(4-2+2==0)                    Failed. 4
+test(len("hello,world!")==13)     Failed. 11
