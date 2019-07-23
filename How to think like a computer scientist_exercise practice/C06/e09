@@ -16,11 +16,11 @@ def to_secs(h,m,s):
 
 
 def hours_in(s):
-    return int(s/3600)
+    return s//3600
 
 
 def minutes_in(s):
-    return int(int(s/60)%60)
+    return int(s//60%60)
 
 
 def seconds_in(s):
