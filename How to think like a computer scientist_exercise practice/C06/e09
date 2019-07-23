@@ -1,0 +1,32 @@
+#write 3 functions that are the "inverses" of to_secs:
+
+import sys
+
+def test(did_pass):
+    lineum = sys._getframe(1).f_lineno
+    if did_pass:
+        msg = "Test at line{0} ok.".format(lineum)
+    else:
+        msg = ("Test at line{0} FAILED.".format(lineum))
+    print(msg)
+
+
+def to_secs(h,m,s):
+    return int(h*3600+m*60+s)
+
+
+def hours_in(s):
+    return int(s/3600)
+
+
+def minutes_in(s):
+    return int(int(s/60)%60)
+
+
+def seconds_in(s):
+    return int(s%60)
+
+
+test(hours_in(9010) ==2)
+test(minutes_in(9010) ==30)
+test(seconds_in(9010) ==10)
