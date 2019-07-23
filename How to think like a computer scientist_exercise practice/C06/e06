@@ -1,0 +1,15 @@
+#write a function days_in_month which takes the name of a month, and returns the number of days in the month
+
+BigMon = ["January","March","May","July","August","October","December"]
+SmallMon = ["April","June","September","November"]
+def days_in_month(x):
+    if x == "February":
+        return 28
+    for x in BigMon:
+        return 31
+    for x in SmallMon:
+        return 30
+
+
+test(days_in_month("February") == 28)
+test(days_in_month("December") == 31)
