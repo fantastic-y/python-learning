@@ -1,0 +1,24 @@
+#write the function fct(t) designed to return the integer vcalue of the nearest degree Clesius for given temperature in Fahrenheit.
+
+import sys
+
+def test(did_pass):
+    lineum = sys._getframe(1).f_lineno
+    if did_pass:
+        msg = "Test at line{0} ok.".format(lineum)
+    else:
+        msg = ("Test at line{0} FAILED.".format(lineum))
+    print(msg)
+
+
+def ftc(t):
+    return round((t-32)*0.5556)
+
+
+test(ftc(212)==100)
+test(ftc(32)==0)
+test(ftc(-40)==-40)
+test(ftc(36)==2)
+test(ftc(37)==3)
+test(ftc(38)==3)
+test(ftc(39)==4)
