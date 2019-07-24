@@ -1,0 +1,29 @@
+#write a function slope(x1,y1,x2,y2)that returns the slope of the line throught the point(x1,y1) and (x2,y2); 
+#intercept(x1,y1,x2,y2)that returns the y-intercept
+
+import sys
+
+def test(did_pass):
+    lineum = sys._getframe(1).f_lineno
+    if did_pass:
+        msg = "Test at line{0} ok.".format(lineum)
+    else:
+        msg = ("Test at line{0} FAILED.".format(lineum))
+    print(msg)
+
+
+def slope(x1,y1,x2,y2):
+    return float((y2-y1)/(x2-x1))
+
+def intercept(x1,y1,x2,y2):
+    return float((x2*y1-x1*y2)/(x2-x1))
+
+
+test(slope(5,3,4,2)==1.0)
+test(slope(1,2,3,2)==0.0)
+test(slope(1,2,3,3)==0.5)
+test(slope(2,4,1,2)==2.0)
+
+test(intercept(1,6,3,12)==3.0)
+test(intercept(6,1,1,6)==7.0)
+test(intercept(4,6,12,8)==5.0)
