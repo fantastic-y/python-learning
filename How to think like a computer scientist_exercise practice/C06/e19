@@ -1,0 +1,23 @@
+#function c2f(t)
+
+import sys
+
+def test(did_pass):
+    lineum = sys._getframe(1).f_lineno
+    if did_pass:
+        msg = "Test at line{0} ok.".format(lineum)
+    else:
+        msg = ("Test at line{0} FAILED.".format(lineum))
+    print(msg)
+
+
+def c2f(t):
+    return round(t/0.5556+32)
+
+
+test(c2f(0)==32)
+test(c2f(100)==212)
+test(c2f(-40)==-40)
+test(c2f(12)==54)
+test(c2f(18)==64)
+test(c2f(-48)==-54)
