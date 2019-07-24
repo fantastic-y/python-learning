@@ -1,0 +1,20 @@
+#write a function called hypotenuse that returns the length of the hypotenuse of a right triangle given the lengths of the two legs as parameter:
+
+import sys
+
+def test(did_pass):
+    lineum = sys._getframe(1).f_lineno
+    if did_pass:
+        msg = "Test at line{0} ok.".format(lineum)
+    else:
+        msg = ("Test at line{0} FAILED.".format(lineum))
+    print(msg)
+
+
+def hypotenuse(a,b):
+    return float((a**2+b**2)**0.5)
+
+test(hypotenuse(3,4)==5.0)
+test(hypotenuse(12,5)==13.0)
+test(hypotenuse(24,7)==25.0)
+test(hypotenuse(9,12)==15.0)
