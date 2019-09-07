@@ -1,0 +1,12 @@
+#write a function to count how many odd numbers are in a list
+
+list = {1,2,3,6,7,10}
+def count_odd(n):
+  for v in list:
+    if v%2 = 0:
+      n = n+1
+    else:
+      n = n+0
+  return n
+  
+print(count_odd(0))
